@@ -34,6 +34,9 @@ A FAQ section is available from the FL3R User Agent Comments Settings page. If y
 
 == Changelog ==
 
+= 1.5 =
+* Added Italian localization.
+
 = 1.4 =
 * Security update.
 
