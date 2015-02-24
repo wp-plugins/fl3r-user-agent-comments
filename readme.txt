@@ -34,6 +34,9 @@ A FAQ section is available from the FL3R User Agent Comments Settings page. If y
 
 == Changelog ==
 
+= 1.4 =
+* Security update.
+
 = 1.3 =
 * Images error in backend patched.
 
@@ -59,6 +62,9 @@ A FAQ section is available from the FL3R User Agent Comments Settings page. If y
 * First release. A few browser and OS supported.
 
 == Upgrade Notice ==
+
+= 1.4 =
+* Security update. Upgrade the plugin to ensure the last security fixes.
 
 == Donate ==
 
