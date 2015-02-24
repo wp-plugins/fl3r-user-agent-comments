@@ -4,7 +4,7 @@
 	Plugin Name: FL3R User Agent Comments
 	Plugin URI: https://wordpress.org/plugins/fl3r-user-agent-comments/
 	Description: Shows user agent information to your website comments by adding browser and platform icons.
-	Version: 1.4
+	Version: 1.5
 	Author: Armando "FL3R" Fiore
 	E-Mail: armandofioreinfo@gmail.com
 	Author URI: https://www.twitter.com/Armando_Fiore
@@ -64,7 +64,7 @@
 <?php if(function_exists('screen_icon')) screen_icon(); ?>
 <form method="post" action="<?php echo esc_url(get_permalink()); ?>">
 <h2>
-  <?php _e('FL3R User Agent Comments settings', 'fl3r-user-agent-comments'); ?>
+  <?php _e('FL3R User Agent Comments - Settings', 'fl3r-user-agent-comments'); ?>
 </h2>
 <h3>
   <?php _e('General', 'fl3r-user-agent-comments'); ?>
@@ -79,11 +79,11 @@
 								margin: 0px 4px !important;
 								}
 							</style>
-  <?php _e('Hide ', 'fl3r-user-agent-comments'); ?>
-  <img src="<?php echo plugins_url("/images/browser/unknown.png", __FILE__);?>" alt="Unknown browser" title="Unknown browser" class="fl3r-uac_icon_dashboard">
+  <?php _e('Hide', 'fl3r-user-agent-comments'); ?>
+  <img src="<?php echo plugins_url("/images/browser/unknown.png", __FILE__);?>" alt="<?php _e('Unknown browser', 'fl3r-user-agent-comments'); ?>" title="<?php _e('Unknown browser', 'fl3r-user-agent-comments'); ?>" class="fl3r-uac_icon_dashboard">
   <?php _e('for the unknown browsers and', 'fl3r-user-agent-comments'); ?>
-  <img src="<?php echo plugins_url("/images/os/unknown.png", __FILE__);?>" alt="Unknown platform" title="Unknown platform" class="fl3r-uac_icon_dashboard">
-  <?php _e(' for the unknown platforms if the user agent are unavailable.', 'fl3r-user-agent-comments'); ?>
+  <img src="<?php echo plugins_url("/images/os/unknown.png", __FILE__);?>" alt="<?php _e('Unknown platform', 'fl3r-user-agent-comments'); ?>" title="<?php _e('Unknown platform', 'fl3r-user-agent-comments'); ?>" class="fl3r-uac_icon_dashboard">
+  <?php _e('for the unknown platforms if the user agent are unavailable.', 'fl3r-user-agent-comments'); ?>
 </p>
 <h3>
   <?php _e('Dashboard', 'fl3r-user-agent-comments'); ?>
@@ -129,29 +129,29 @@
 </p>
 <p>
   <input name="post_show_platform" value="true" type="checkbox" <?php if ( $fuac_options['post_show_platform'] == 'true' ) echo ' checked="checked" '; ?> />
-  <?php _e('show platform icon.', 'fl3r-user-agent-comments'); ?>
+  <?php _e('Show platform icon.', 'fl3r-user-agent-comments'); ?>
 </p>
 <div class="submit">
   <input class="button-primary" type="submit" name="update_fuac_settings" value="<?php _e('Save all settings', 'fl3r-user-agent-comments'); ?>" />
 </div>
 <hr />
-<h3>FAQ</h3>
-      <p><i>In some comments icons do not reflect the browser and the operating system correctly. Why?</i></p>
-      <p>Some browsers and some operating systems do not always report a coherent user agent.</p>
+<h3><?php _e('FAQ', 'fl3r-user-agent-comments'); ?></h3>
+      <p><i><?php _e('In some comments icons do not reflect the browser and the operating system correctly. Why?', 'fl3r-user-agent-comments'); ?></i></p>
+      <p><?php _e('Some browsers and some operating systems do not always report a coherent user agent.', 'fl3r-user-agent-comments'); ?></p>
 	  <br>
-      <p><i>Sometimes the icons in the comments are unknown. Why?</i></p>
-      <p>The plugin detects over 150 browsers and operating systems, representing over 99% of the systems that access the internet. Unfortunately, for various reasons, the 1% is not identifiable.</p>
+      <p><i><?php _e('Sometimes the icons in the comments are unknown. Why?', 'fl3r-user-agent-comments'); ?></i></p>
+      <p><?php _e('The plugin detects over 150 browsers and operating systems, representing over 99% of the systems that access the internet. Unfortunately, for various reasons, the 1% is not identifiable.', 'fl3r-user-agent-comments'); ?></p>
 	  <br>
-      <p><i>How can I show user agent icons in a widget?</i></p>
-      <p>You can see the user agent icons in a widget only if in the settings you are selected "After comment author name" in "Display location". You can so use the default Wordpress comments widget.</p>
+      <p><i><?php _e('How can I show user agent icons in a widget?', 'fl3r-user-agent-comments'); ?></i></p>
+      <p><?php _e('You can see the user agent icons in a widget only if in the settings you are selected "After comment author name" in "Display location". You can so use the default Wordpress comments widget.', 'fl3r-user-agent-comments'); ?></p>
 <hr />
-<h3>Credits</h3>
-      <p>User Agent Comments is a plugin created by Armando "FL3R" Fiore.</p>
-      <p>Thanks for using User Agent Comments, you helped a developer to increase his self-esteem!</p>
-      <h3>Copyright</h3>
-      <p>Copyright © 2015 Armando "FL3R" Fiore. All rights reserved. This software is provided as is, without any express or implied warranty. In no event shall the author be liable for any damage arising from the use of this software.</p>
-      <h3>Follow me!</h3>
-      <p>If you want to ask me, you want to send your opinion or you have a question please don't hesitate to contact me.</p>
+<h3><?php _e('Credits', 'fl3r-user-agent-comments'); ?></h3>
+      <p><?php _e('User Agent Comments is a plugin created by Armando "FL3R" Fiore.', 'fl3r-user-agent-comments'); ?></p>
+      <p><?php _e('Thanks for using User Agent Comments, you helped a developer to increase his self-esteem!', 'fl3r-user-agent-comments'); ?></p>
+      <h3><?php _e('Copyright', 'fl3r-user-agent-comments'); ?></h3>
+      <p><?php _e('Copyright © 2015 Armando "FL3R" Fiore. All rights reserved. This software is provided as is, without any express or implied warranty. In no event shall the author be liable for any damage arising from the use of this software.', 'fl3r-user-agent-comments'); ?></p>
+      <h3><?php _e('Follow me!', 'fl3r-user-agent-comments'); ?></h3>
+      <p><?php _e('If you want to ask me, you want to send your opinion or you have a question please don\'t hesitate to contact me.', 'fl3r-user-agent-comments'); ?></p>
 	  <p>
 	  <a href="https://twitter.com/Armando_Fiore"><img src="<?php echo plugins_url("/images/gui/twitter.png", __FILE__);?>" alt="Twitter: Armando_Fiore" title="Twitter: Armando_Fiore" class="fl3r-uac_icon_dashboard"></a>
 	  <a href="https://www.facebook.com/armando.FL3R.fiore"><img src="<?php echo plugins_url("/images/gui/facebook.png", __FILE__);?>" alt="Facebook: armando.FL3R.fiore" title="Facebook: armando.FL3R.fiore" class="fl3r-uac_icon_dashboard"></a>
@@ -160,19 +160,19 @@
 	  </p>
 <hr />
 <div>
-  <h3>Donate</h3>
-  <p>If you like this plugin, you consider making a small donation. Thanks.</p>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="PG99J6Q6A3VEC">
-        <input type="image" src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
-        <img alt="" border="0" src="https://www.paypalobjects.com/it_IT/i/scr/pixel.gif" width="1" height="1">
-      </form>
+  <h3><?php _e('Donate', 'fl3r-user-agent-comments'); ?></h3>
+  <p><?php _e('If you like this plugin, you consider making a small donation. Thanks.', 'fl3r-user-agent-comments'); ?></p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="PG99J6Q6A3VEC">
+<input type="image" src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+<img alt="" border="0" src="https://www.paypalobjects.com/it_IT/i/scr/pixel.gif" width="1" height="1">
+</form>
 
 </div>
 <div>
-  <h3>My other plugins</h3>
-<a href="https://wordpress.org/plugins/fl3r-feelbox/">FL3R FeelBox</a>
+  <h3><?php _e('My other plugins', 'fl3r-user-agent-comments'); ?></h3>
+<a href="https://wordpress.org/plugins/fl3r-feelbox/"><?php _e('FL3R FeelBox', 'fl3r-user-agent-comments'); ?></a>
 </div>
 <?php
 	}
@@ -212,7 +212,7 @@
 			return $comment_text;
 		if($fuac_options['post_show_browser'] != 'false')
 			
-		// fl3r: ad entrambe le icone è applicato la class .fl3r-icon-excerpt che evita sovrapposioni nella dashboard
+		// fl3r: ad entrambe le icone è applicata la class .fl3r-icon-excerpt che evita sovrapposioni nella dashboard
 			$fuac_string = '<style>
   .fl3r-icon-excerpt {position:initial !important;}
 </style>
