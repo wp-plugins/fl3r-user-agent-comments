@@ -2,9 +2,9 @@
 
 	/*
 	Plugin Name: FL3R User Agent Comments
-	Plugin URI: XXX
+	Plugin URI: https://wordpress.org/plugins/fl3r-user-agent-comments/
 	Description: Shows user agent information to your website comments by adding browser and platform icons.
-	Version: 1.2
+	Version: 1.3
 	Author: Armando "FL3R" Fiore
 	E-Mail: armandofioreinfo@gmail.com
 	Author URI: https://www.twitter.com/Armando_Fiore
@@ -56,7 +56,7 @@
 <div class="updated">
   <p><strong>
     <?php _e("Settings saved. (⌒‿⌒) If you like this plugin, you consider making a small donation. ","fl3r-user-agent-comments");?>
-    </strong><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PG99J6Q6A3VEC"><img src="<?php echo get_option('siteurl').plugins_url;?>/images/gui/paypal-horizontal.png" alt="Donate with PayPal" title="Donate with PayPal" class="fl3r-uac_icon_dashboard"></a></p>
+    </strong><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PG99J6Q6A3VEC"><img src="<?php echo plugins_url("/images/gui/paypal-horizontal.png", __FILE__);?>" alt="Donate with PayPal" title="Donate with PayPal" class="fl3r-uac_icon_dashboard"></a></p>
 </div>
 <?php
 		} ?>
@@ -80,9 +80,9 @@
 								}
 							</style>
   <?php _e('Hide ', 'fl3r-user-agent-comments'); ?>
-  <img src="<?php echo get_option('siteurl').plugins_url;?>/images/browser/unknown.png" alt="Unknown browser" title="Unknown browser" class="fl3r-uac_icon_dashboard">
+  <img src="<?php echo plugins_url("/images/browser/unknown.png", __FILE__);?>" alt="Unknown browser" title="Unknown browser" class="fl3r-uac_icon_dashboard">
   <?php _e('for the unknown browsers and', 'fl3r-user-agent-comments'); ?>
-  <img src="<?php echo get_option('siteurl').plugins_url;?>/images/os/unknown.png" alt="Unknown platform" title="Unknown platform" class="fl3r-uac_icon_dashboard">
+  <img src="<?php echo plugins_url("/images/os/unknown.png", __FILE__);?>" alt="Unknown platform" title="Unknown platform" class="fl3r-uac_icon_dashboard">
   <?php _e(' for the unknown platforms if the user agent are unavailable.', 'fl3r-user-agent-comments'); ?>
 </p>
 <h3>
@@ -153,10 +153,10 @@
       <h3>Follow me!</h3>
       <p>If you want to ask me, you want to send your opinion or you have a question please don't hesitate to contact me.</p>
 	  <p>
-	  <a href="https://twitter.com/Armando_Fiore"><img src="<?php echo get_option('siteurl').plugins_url;?>/images/gui/twitter.png" alt="Twitter: Armando_Fiore" title="Twitter: Armando_Fiore" class="fl3r-uac_icon_dashboard"></a>
-	  <a href="https://www.facebook.com/armando.FL3R.fiore"><img src="<?php echo get_option('siteurl').plugins_url;?>/images/gui/facebook.png" alt="Facebook: armando.FL3R.fiore" title="Facebook: armando.FL3R.fiore" class="fl3r-uac_icon_dashboard"></a>
-	  <a href="https://plus.google.com/+ArmandoFiore"><img src="<?php echo get_option('siteurl').plugins_url;?>/images/gui/google.png" alt="Google+: ArmandoFiore" title="Google+: ArmandoFiore" class="fl3r-uac_icon_dashboard"></a>
-	  <a href="http://it.linkedin.com/in/armandofiore"><img src="<?php echo get_option('siteurl').plugins_url;?>/images/gui/linkedin.png" alt="LinkedIn: armandofiore" title="LinkedIn: armandofiore" class="fl3r-uac_icon_dashboard"></a>
+	  <a href="https://twitter.com/Armando_Fiore"><img src="<?php echo plugins_url("/images/gui/twitter.png", __FILE__);?>" alt="Twitter: Armando_Fiore" title="Twitter: Armando_Fiore" class="fl3r-uac_icon_dashboard"></a>
+	  <a href="https://www.facebook.com/armando.FL3R.fiore"><img src="<?php echo plugins_url("/images/gui/facebook.png", __FILE__);?>" alt="Facebook: armando.FL3R.fiore" title="Facebook: armando.FL3R.fiore" class="fl3r-uac_icon_dashboard"></a>
+	  <a href="https://plus.google.com/+ArmandoFiore"><img src="<?php echo plugins_url("/images/gui/google.png", __FILE__);?>" alt="Google+: ArmandoFiore" title="Google+: ArmandoFiore" class="fl3r-uac_icon_dashboard"></a>
+	  <a href="http://it.linkedin.com/in/armandofiore"><img src="<?php echo plugins_url("/images/gui/linkedin.png", __FILE__);?>" alt="LinkedIn: armandofiore" title="LinkedIn: armandofiore" class="fl3r-uac_icon_dashboard"></a>
 	  </p>
 <hr />
 <div>
