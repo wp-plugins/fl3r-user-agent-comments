@@ -13,14 +13,10 @@ Show the browser and the operating system of your users in the comments and crea
 
 This plugin detects, via the user agent, the browser and the operating system of the users of your site. When they publish a comment, the plugin shows the icons next to their name of their browser and OS, making the chain of comments more pleasant and interesting. Currently supported about 60 browsers, 100 OS and some web spiders and bots.
 
-If you like this plugin, you consider making a small donation. Thanks. https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PG99J6Q6A3VEC
-
-FL3R FeelBox plugin: https://wordpress.org/plugins/fl3r-feelbox/
-
 == Installation ==
 
 1. Download and unzip the plugin file.
-2. Upload the unzipped folder into your /wp-content/plugins/ directory.
+2. Upload "fl3r-user-agent-comments" folder into your /wp-content/plugins/ directory.
 3. Go to the Plugins section of your WordPress admin panel and activate the FL3R User Agent Comments.
 4. And that's all folks!
 
@@ -37,6 +33,9 @@ A FAQ section is available from the FL3R User Agent Comments Settings page. If y
 5. Credits.
 
 == Changelog ==
+
+= 1.3 =
+* Images error in backend patched.
 
 = 1.2 =
 * Calling file locations patch for support all Wordpress setups.
@@ -64,3 +63,7 @@ A FAQ section is available from the FL3R User Agent Comments Settings page. If y
 == Donate ==
 
 If you like this plugin, you consider making a small donation. Thanks. https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PG99J6Q6A3VEC
+
+== My other plugins ==
+
+FL3R FeelBox: https://wordpress.org/plugins/fl3r-feelbox/
