@@ -4,7 +4,7 @@
 	Plugin Name: FL3R User Agent Comments
 	Plugin URI: https://wordpress.org/plugins/fl3r-user-agent-comments/
 	Description: Shows user agent information to your website comments by adding browser and platform icons.
-	Version: 1.3
+	Version: 1.4
 	Author: Armando "FL3R" Fiore
 	E-Mail: armandofioreinfo@gmail.com
 	Author URI: https://www.twitter.com/Armando_Fiore
