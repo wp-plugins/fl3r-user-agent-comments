@@ -62,7 +62,7 @@
 		} ?>
 <div class=wrap>
 <?php if(function_exists('screen_icon')) screen_icon(); ?>
-<form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
+<form method="post" action="<?php echo esc_url(get_permalink()); ?>">
 <h2>
   <?php _e('FL3R User Agent Comments settings', 'fl3r-user-agent-comments'); ?>
 </h2>
