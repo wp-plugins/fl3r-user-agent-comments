@@ -3,7 +3,7 @@
 
 	File name: browser.php
 	Author: Armando "FL3R" Fiore
-	Last modified: February 2015
+	Last modified: March 2015
 
 	**************************************************************
 
@@ -21,11 +21,11 @@
 		echo "$br->Platform, $br->Name version $br->Version";
 
 *****************************************************************/
-
+	
 	class Browser{
 
 		public $Name = "Unknown";
-		public  $Version = "";
+		public $Version = "";
 		public $Platform = "Unknown";
 		public $Pver = "";
 		public $Agent = "Not reported";
@@ -34,14 +34,25 @@
 		public $Architecture = "";
 
 		public function Browser($agent){
-		
 
-			// initialize properties
-			$bd['platform'] = "Unknown";
+			// proprietà
+			$bd['platform'] = $agent;
 			$bd['pver'] = "";
-			$bd['browser'] = "Unknown";
+			$bd['browser'] = $agent;
 			$bd['version'] = "";
 			$this->Agent = $agent;
+			
+			// fl3r: previene hack da iniezione codice javascript nello user agent
+			
+			if (preg_match('/script/',$agent)) {
+			$agent = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $agent);
+			$bd['platform'] = "Defended";
+			$bd['browser'] = "Defended";
+			$agent = 'Defended';
+			
+			}
+			
+			//echo $agent;
 
 			// fl3r: sistemi operativi
 			
@@ -420,6 +431,7 @@
 				$bd['platform'] = "Nintendo Wii U";
 				$bd['browser'] = "NetFront Browser";
 			}
+			
 			// wordpress
 			elseif (stripos($agent,'wordpress'))
 				$bd['platform'] = 'XML-RPC';
@@ -443,7 +455,7 @@
 				$bd['platform'] = "PlayStation Portable";
 			elseif (stripos($agent,'PLAYSTATION 3'))
 				$bd['platform'] = "PlayStation 3";
-			
+
 			// fedora
 			if(stripos($agent,'fedora'))
 			{
@@ -893,18 +905,18 @@
 				$bd['architecture'] = "x86_64";
 			}
 			
-			// finally assign our properties
+			// fl3r: assegna le varie proprietà
 			$this->Name = $bd['browser'];
 			$this->Version = $bd['version'];
 			$this->Platform = $bd['platform'];
 			$this->Pver = $bd['pver'];
 			$this->AOL = $bd['aol'];
 			$this->Architecture = $bd['architecture'];
-
 			
 			// fl3r: assegna immagini browser
-			
 			$this->BrowserImage = strtolower($this->Name);
+			// fl3r: elimina caratteri non alfanumerici
+			preg_replace("/[^A-Za-z0-9 ]/", '', $this->Name);
 			if($this->BrowserImage == "msie")
 				$this->BrowserImage .=  '-'.$this->Version;
 			
@@ -914,9 +926,9 @@
 			
 			
 			// fl3r: assegna immagini os
-			
 			$this->PlatformImage = strtolower($this->Platform);
-			
+			// fl3r: elimina caratteri non alfanumerici
+			preg_replace("/[^A-Za-z0-9 ]/", '', $this->Name);
 			if($this->PlatformImage == "linux mint")
 				$this->PlatformImage = "linux-mint";
 			if($this->PlatformImage == "fedora ")
