@@ -3,7 +3,7 @@
 
 	File name: browser.php
 	Author: Armando "FL3R" Fiore
-	Last modified: March 2015
+	Last modified: August 2015
 
 	**************************************************************
 
@@ -102,6 +102,8 @@
 				elseif(stripos($agent,'Windows NT 6.3'))
 					$val = '8.1';
 				elseif(stripos($agent,'Windows NT 6.4'))
+					$val = '10';
+				elseif(stripos($agent,'Windows NT 10.0'))
 					$val = '10';
 			elseif(stripos($agent,'Windows CE'))
 				$val = 'CE';
@@ -433,8 +435,8 @@
 			}
 			
 			// wordpress
-			elseif (stripos($agent,'wordpress'))
-				$bd['platform'] = 'XML-RPC';
+			elseif (stripos($agent,'wordpress.com'))
+				$bd['platform'] = 'wordpress.com';
 					
 			// xbox
 			elseif(stripos($agent,'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)'))
@@ -485,6 +487,10 @@
 				$bd['platform'] = 'Linux '.$val[0];
 				$bd['pver'] = $val[1];
 			}
+			
+			// wordpress.com
+			elseif (stripos($agent,'wordpress.com'))
+			$bd['platform'] = "Wordpress";
 
 //////////////////////////////////////////////////////////////////////////////
 			
@@ -671,7 +677,34 @@
 					$val = explode('/',$agent);
 					$bd['version'] = $val[1];
 				}
+			}			
+			
+			elseif(stripos($agent,'msie') && !stripos($agent,'opera')){
+				$val = explode(" ",stristr($agent,"msie"));
+				$bd['browser'] = $val[0];
+				$bd['version'] = $val[1];
 			}
+			
+			// edge
+			
+			elseif(stripos($agent,'edge')){
+				{
+				$bd['browser'] = "Edge";
+				}
+				$val = explode('Edge',$agent);
+				$val = explode(" ",$val[1]);
+				$bd['version'] = $val[0];
+			}
+			
+			// XML-RPC
+			
+			elseif(stripos($agent,'xml-rpc')){
+				{
+				$bd['browser'] = "XML-RPC";
+				}
+				$val = explode('XML-RPC',$agent);
+			}
+			
 			// galeon
 			elseif(stripos($agent,'galeon')){
 				$val = explode(" ",stristr($agent,"galeon"));
