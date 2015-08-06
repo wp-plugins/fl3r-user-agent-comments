@@ -4,11 +4,14 @@
 	Plugin Name: FL3R User Agent Comments
 	Plugin URI: https://wordpress.org/plugins/fl3r-user-agent-comments/
 	Description: Shows user agent information to your website comments by adding browser and platform icons.
-	Version: 2.0
+	Version: 2.1
 	Author: Armando "FL3R" Fiore
 	E-Mail: armandofioreinfo@gmail.com
 	Author URI: https://www.twitter.com/Armando_Fiore
-	License: Freeware, no warranty. Modifications not allowed.
+	License: Copyright Armando "FL3R" Fiore, released under GPL v2.
+	*/
+	/*
+	This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	*/
 
 	load_plugin_textdomain('fl3r-user-agent-comments', NULL, dirname(plugin_basename(__FILE__)) . "/languages");

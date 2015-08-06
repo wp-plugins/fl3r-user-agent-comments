@@ -5,7 +5,7 @@ Tags: plugin, comments, comment, user, agent, user agent, browser, browsers, os,
 Requires at least: 2.7.1
 Tested up to: 4.1
 Stable tag: trunk
-License: Freeware, no warranty. Modifications not allowed.
+License: Copyright Armando "FL3R" Fiore, released under GPL v2.
 
 Show the browser and the operating system of your users in the comments and create a chain of comments most beautiful and interesting to read!
 
@@ -33,6 +33,9 @@ A FAQ section is available from the FL3R User Agent Comments Settings page. If y
 5. Credits.
 
 == Changelog ==
+
+= 2.1 =
+* Added 2 browser (Microsoft Edge and XML-RPC protocol) and 2 OS (Windows 10 and Wordpress platform).
 
 = 2.0 =
 * Important various security updates, in collaboration with Robert Paprocki, www.cryptobells.com.
